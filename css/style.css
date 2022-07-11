@@ -1015,6 +1015,7 @@ html {
   flex-direction: column;
   justify-content: space-between;
   width: 48%;
+  height: 100%;
 }
 
 .contact__form__info__item {
@@ -1040,7 +1041,7 @@ html {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 19px;
+  line-height: 39px;
 }
 
 .contact__form__text {
@@ -1054,7 +1055,7 @@ html {
 
 .contact__form__info__bigitem textarea {
   width: 100%;
-  min-height: 100%;
+  height: 220px;
   resize: none;
   font-family: 'Open Sans';
   font-style: normal;
@@ -1731,6 +1732,7 @@ html {
   }
   .contact__form__info__bigitem textarea {
     width: 100%;
+    height: 200px;
   }
 }
 
