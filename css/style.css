@@ -787,7 +787,7 @@ html {
 .customers__triangle {
   position: absolute;
   margin-top: -70px;
-  margin-left: 19%;
+  margin-left: 5%;
   width: 0;
   height: 0;
   border-top: 30px solid #E2E2E2;
@@ -1027,7 +1027,7 @@ html {
 }
 
 .contact__form__info__item input,
-.contact__form__info__bigitem textarea {
+.contact__form__text textarea {
   outline: none;
   border: none;
   border-bottom: 1px solid #BDBDBD;
