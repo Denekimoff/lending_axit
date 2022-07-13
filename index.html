@@ -19,21 +19,21 @@
   <header class="header">
       <div class="wrapper">
         <div class="header__body">
-          <a class="header__logo" href="#main" alt="LOGO">
+          <a  data-axit class="header__logo" href="#main" alt="LOGO">
             <img src="assets/img/Group logo AXIT.png" alt="LOGO">
           </a>
-          <div class="header__burger">
-            <span></span>
-          </div>
-          <nav class="header__menu">
+          <nav class="header__menu" data-nav>
             <ul class="nav-list">
-              <li><a class="nav-item" href="#features">Features</a></li>
-              <li><a class="nav-item" href="#about">About</a></li>
-              <li><a class="nav-item" href="#pricing">Pricing</a></li>
-              <li><a class="nav-item" href="#reveiws">Reveiws</a></li>
-              <li><a class="nav-item" href="#contact">Contact</a></li>
+              <li><a data-sctn-tbs class="nav-item" href="#features">Features</a></li>
+              <li><a data-awesome class="nav-item" href="#about">About</a></li>
+              <li><a data-options class="nav-item" href="#pricing">Pricing</a></li>
+              <li><a data-banner class="nav-item" href="#reveiws">Reveiws</a></li>
+              <li><a data-contact class="nav-item" href="#contact">Contact</a></li>
             </ul>
           </nav>
+          <button class="header__burger" data-burger aria-label="Open menu" aria-expanded="false">
+            <span class="header__burger__line"></span>
+          </button>
         </div>
       </div>
   </header>
@@ -408,5 +408,5 @@
     </div>
   </footer>
 </body>
-
+<script src="js/script.js"></script>
 </html>

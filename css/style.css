@@ -20,6 +20,7 @@ html {
   position: relative;
   z-index: 0;
   background: url("../assets/img/image.jpg") no-repeat center/cover;
+  overflow: hidden;
 }
 
 .axit::after {
@@ -54,6 +55,7 @@ html {
 .header__body {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-left: 100px;
 }
 
@@ -83,6 +85,7 @@ html {
 
 .nav-item {
   padding: 22px;
+  text-decoration: none;
   color: #fff;
   font-family: 'Open Sans';
   font-style: normal;
@@ -207,7 +210,7 @@ html {
 
 .form-title {
   margin: 0 auto;
-  width: 370px;
+  max-width: 370px;
   padding: 30px 0;
   text-align: center;
   font-family: 'Open Sans';
@@ -1812,4 +1815,97 @@ html {
     max-width: 100%;
   }
 
+  .header__menu {
+    position: fixed;
+    right: 0;
+    top: 76px;
+
+    z-index: 1001;
+    background-color: #000;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: transform 0.6s;
+  }
+  .header__menu--visible {
+    transform: none;
+  }
+  .nav-list {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    overflow-y: auto;
+  }
+  .nav-list li {
+    width: 100%;
+    margin: 25px 0;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(68, 68, 68);
+  }
+  .nav-list li:nth-child(odd) {
+    border-left: 1px solid rgb(68, 68, 68);
+    border-radius: 0 0 0 8px;
+  }
+  .nav-list li:nth-child(even) {
+    border-right: 1px solid rgb(68, 68, 68);
+    border-radius: 0 0 8px 0;
+  }
+  .nav-item {
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+  }
+  .header__burger {
+    display: block;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0;
+    position: relative;
+    width: 35px;
+    height: 25px;
+  }
+  .header__burger__line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .header__burger:before,
+  .header__burger:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, bottom 0.3s ease-in-out;
+  }
+  .header__burger:before {
+    top: 0;
+  }
+  .header__burger:after {
+    bottom: 0;
+  }
+  .header__burger--active .header__burger__line {
+    opacity: 0;
+  }
+  .header__burger--active::before {
+    transform: rotate(45deg);
+    top: 50%;
+  }
+  .header__burger--active::after {
+    bottom: auto;
+    transform: rotate(-45deg);
+    top: 50%;
+  }
+
+  .stop-scroll {
+    overflow: hidden;
+  }
 }
